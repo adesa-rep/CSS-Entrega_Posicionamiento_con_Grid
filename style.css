@@ -5,7 +5,7 @@
   --orange-color: #ff693d;
   --border: 2px solid var(--blue-color);
   --spacing-max: 28px;
-  --spacing-min: 15px;
+  --spacing-min: 1vw; /*como el width es el 98% intentamos que el padding ocupe el 2% restante y asi no tener scroll horizontal*/
   --radius: 10px;
   --typo-sm: 20px;
   --typo-md: 30px;
@@ -22,15 +22,15 @@
 }
 
 body {
-  /* width: calc(100vw - var(--spacing-max)); Resta los márgenes */
-  width: 100vw;
+  width: 98vw;
   min-height: 100vh;
-  /* margin: var(--spacing-max); */
   padding: var(--spacing-min);
+  margin: auto; /*centrar el contenido en el espacio disponible*/
   display: grid;
   gap: var(--spacing-max);
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-template-rows: repeat(6, minmax(200px, 1fr));
+  /* incialmente el minmax usaba unidades absolutas, pero de esa forma las imagenes quedaban  cortadas ya que excedian el ancho de la pantalla entonces habria que disminuir su ancho, pero la proporcion es dificil de mantener usando unidades absolutas asi que usamos unidades relativas  */
+  grid-template-columns: repeat(auto-fit, minmax(10vw, 1fr));
+  grid-template-rows: repeat(6, minmax(20vh, 1fr));
 }
 
 header {
