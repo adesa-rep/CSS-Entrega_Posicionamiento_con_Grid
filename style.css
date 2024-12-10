@@ -211,14 +211,16 @@ button:hover {
     --spacing-min: 15px;
     --radius: 10px;
     --typo-sm: 14px;
-    --typo-md: 18px;
+    --typo-md: 17px;
     --typo-xl: 23px;
     --grid-column: 1 / 2;
   }
   body {
     grid-template-columns: 1fr;
-    /* grid-template-rows: repeat(auto-fit, 1fr); */
-    grid-auto-rows: auto;
+    grid-template-rows: repeat(
+      auto-fit,
+      minmax(0, 1fr)
+    ); /*con el 0 indicamos que la fila puede desaparecer si no hay contenido*/
   }
 
   header {
@@ -242,6 +244,7 @@ button:hover {
   main {
     grid-column: var(--grid-column);
     grid-row: 4 / 5;
+    padding: 3vw;
   }
 
   .time {
