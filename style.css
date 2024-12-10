@@ -7,7 +7,7 @@
   --spacing-max: 28px;
   --spacing-min: 15px;
   --radius: 10px;
-  --typo-sm: 28px;
+  --typo-sm: 20px;
   --typo-md: 30px;
   --typo-xl: 34px;
   --border-trial: 2px solid red;
@@ -55,12 +55,10 @@ header > h1 {
 }
 
 header > p {
-  /* align-self: center; */
   grid-column: 1 / 2;
   grid-row: 2 / 4;
-  /* align-content: flex-end; */
   text-align: justify;
-  font-weight: var(--typo-sm);
+  font-size: var(--typo-sm);
   align-self: center;
 }
 
